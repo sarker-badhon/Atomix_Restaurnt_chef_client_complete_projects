@@ -12,6 +12,7 @@ import Blog from './components/Blog.jsx';
 import Contacts from './components/Contacts.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import Login from './components/Login.jsx';
+import Registration from './components/Registration.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/registration',
+        element:<Registration></Registration>
       },
       {
         path:'*',

@@ -21,6 +21,7 @@ const Header = () => {
 
                 <Link title='profile' className='' to="/profile">Profile</Link>
                 <Link className='btn' to="/login">Login</Link>
+                <Link className='btn' to="/registration">Registration</Link>
             </div>
         </div>
     );
