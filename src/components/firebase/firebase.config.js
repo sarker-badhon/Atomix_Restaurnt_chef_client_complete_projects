@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCsBmcB3b-OsxgOn7-cNQX-Pm7FEDQMIDg",
-  authDomain: "atomix-restaruant-chef.firebaseapp.com",
-  projectId: "atomix-restaruant-chef",
-  storageBucket: "atomix-restaruant-chef.appspot.com",
-  messagingSenderId: "922934231973",
-  appId: "1:922934231973:web:bf491d9f92e0a008129e4c"
+  apiKey: import.meta.env.VITE_APIKEY ,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

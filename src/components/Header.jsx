@@ -1,7 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from './Provider/AuthProvider';
 
 const Header = () => {
+    const { user,logOut } = useContext(AuthContext)
+
+     const handlerLogOut=()=>{
+        logOut()
+        .then((result)=>{
+            const loggedUser=result.user;
+            console.log(loggedUser);
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
     return (
         <div className="navbar bg-neutral text-white">
             <div className="navbar-start">
@@ -11,17 +24,26 @@ const Header = () => {
             <div className="navbar-end hidden lg:flex">
 
                 <ul className="menu menu-horizontal px-1">
-                    <li> <Link to="/">Home</Link></li>
-                    <li>  <Link to="/blog">Blog</Link> </li>
-                    <li><Link to="contacts">Contacts</Link></li>
+                    <li> <NavLink to="/">Home</NavLink></li>
+                    <li>  <NavLink to="/blog">Blog</NavLink> </li>
+                    <li><NavLink to="contacts">Contacts</NavLink></li>
                 </ul>
 
             </div>
             <div className="navbar-end px-3">
 
-                <Link title='profile' className='' to="/profile">Profile</Link>
-                <Link className='btn' to="/login">Login</Link>
-                <Link className='btn' to="/registration">Registration</Link>
+                <NavLink className='btn' to="/registration">Register</NavLink>
+                {
+                    user ? <>
+                    <button onClick={handlerLogOut} type="submit">
+                        LogOut</button>
+                        <div className="w-10 rounded-full ml-3">
+                            <img title="profile" className="w-10 rounded-full" src="https://img.freepik.com/premium-vector/smiling-chef-cartoon-character_8250-10.jpg?w=740" />
+                        </div>
+                    </>: <NavLink className='btn' to="/login">Login</NavLink>
+               
+                }
+                
             </div>
         </div>
     );

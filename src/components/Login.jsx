@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Form } from 'react-router-dom';
+import { Form, Link } from 'react-router-dom';
 import { AuthContext } from './Provider/AuthProvider';
 import { FaGooglePlus,FaGithubAlt } from 'react-icons/fa';
 
@@ -59,22 +59,26 @@ const Login = () => {
             <Form onSubmit={handlerLogin} className="card-body"style={{ backgroundImage: `url("https://wallpapercave.com/wp/wp9764014.jpg")`}}>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-bold">Email</span>
+                  <span className="label-text font-bold text-xl text-white">Email</span>
                 </label>
-                <input type="email" name="email" placeholder="email" className="input input-bordered w-60" />
+                <input type="email" name="email" placeholder="email" className="input input-bordered w-80" />
               </div>
               <div className="form-control">
                 <label className="label ">
-                  <span className="label-text font-bold">Password</span>
+                  <span className="label-text font-bold text-xl text-white">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
+                <input type="password" name="password" placeholder="password" className="input input-bordered " required/>
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover font-bold">Forgot password?</a>
+                  <a href="#" className="label-text-alt link link-hover font-bold text-xl text-white">Forgot password?</a>
                 </label>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
+                
+                <p className='link text-white mt-4'><Link to="/registration">create new account ?register</Link>
+              </p>
             <div className='flex mx-auto m-2'>
+
                 <button onClick={googleSignIn} className="btn btn-outline text-white mt-3 mr-3"> <FaGooglePlus className='h-8 w-8 mr-2'></FaGooglePlus> Google </button>
                 <button onClick={githubSignIn} className="btn btn-outline text-white mt-3 mr-3"> <FaGithubAlt className='h-8 w-8 mr-2'></FaGithubAlt> Github </button>
                 

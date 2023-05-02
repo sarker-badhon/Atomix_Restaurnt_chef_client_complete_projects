@@ -66,7 +66,7 @@ const Registration = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
               </div>
-              <p className='link text-white'>Already have an account? <Link to="/login">Login</Link>
+              <p className='link text-white'><Link to="/login">Already have an account? Login</Link>
               </p>
             </Form>
           </div>
