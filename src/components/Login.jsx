@@ -1,6 +1,53 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Form } from 'react-router-dom';
+import { AuthContext } from './Provider/AuthProvider';
+import { FaGooglePlus,FaGithubAlt } from 'react-icons/fa';
 
 const Login = () => {
+    const {signInUser,googleLogIn,githubLogIn}=useContext(AuthContext)
+ const handlerLogin =(e)=>{
+    e.preventDefault()
+    const form = e.target;
+    const email = form.email.value;
+    const password =form.password.value;
+    // console.log(name,email, password);
+
+    signInUser(email,password)
+    .then((result)=>{
+        const signInUser =result.user
+        console.log(signInUser);
+        form.reset("")
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+
+
+ }
+
+ const googleSignIn=()=>{
+    googleLogIn()
+    .then((result)=>{
+        const signInUser =result.user
+        console.log(signInUser);
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+ }
+
+ const githubSignIn=()=>{
+    githubLogIn()
+    .then((result)=>{
+        const signInUser =result.user
+        console.log(signInUser);
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+ }
+
+
     return (
         <div className="hero min-h-screen bg-base-200"style={{ backgroundImage: `url("https://wallpapercave.com/wp/wp9764014.jpg")`}}>
         <div className="hero-content flex-col ">
@@ -9,7 +56,7 @@ const Login = () => {
            
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div className="card-body"style={{ backgroundImage: `url("https://wallpapercave.com/wp/wp9764014.jpg")`}}>
+            <Form onSubmit={handlerLogin} className="card-body"style={{ backgroundImage: `url("https://wallpapercave.com/wp/wp9764014.jpg")`}}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text font-bold">Email</span>
@@ -27,8 +74,13 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
-              </div>
+            <div className='flex mx-auto m-2'>
+                <button onClick={googleSignIn} className="btn btn-outline text-white mt-3 mr-3"> <FaGooglePlus className='h-8 w-8 mr-2'></FaGooglePlus> Google </button>
+                <button onClick={githubSignIn} className="btn btn-outline text-white mt-3 mr-3"> <FaGithubAlt className='h-8 w-8 mr-2'></FaGithubAlt> Github </button>
+                
             </div>
+              </div>
+            </Form>
           </div>
         </div>
       </div>
