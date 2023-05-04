@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form, Link } from 'react-router-dom';
 import { AuthContext } from './Provider/AuthProvider';
+import Swal from 'sweetalert2'
 
+// const Swal = require('sweetalert2')
 const Registration = () => {
  const {createRegister}=useContext(AuthContext)
+
 
   const  handlerRegister= (e)=>{
     e.preventDefault()
@@ -14,19 +17,36 @@ const Registration = () => {
         // console.log(name,email, password);
 
         if(password.length < 6){
-            alert("at least 6 char password")
+          // setError('password must be at least 8 characters or long ');
+          return Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'password must be at least 6 characters or long!',
+          })
         }
+        
+      
 
-
+      if(email,password){
         createRegister(email,password)
         .then((result)=>{
-            const registerUser =result.user
-            console.log(registerUser);
+            console.log(result.user);
             form.reset("")
+            return Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 2000
+            })
+            
         })
         .catch(error=>{
             console.log(error);
+            
         })
+      }
+        
   }
     return (
         <div className="hero min-h-screen bg-base-200 "style={{ backgroundImage: `url("https://wallpapercave.com/wp/wp9764014.jpg")`}}>

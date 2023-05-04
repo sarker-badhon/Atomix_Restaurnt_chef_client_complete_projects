@@ -8,7 +8,7 @@ const Header = () => {
      const handlerLogOut=()=>{
         logOut()
         .then((result)=>{
-            const loggedUser=result.user;
+            const loggedUser = result.user
             console.log(loggedUser);
         })
         .catch((error)=>{
@@ -27,6 +27,7 @@ const Header = () => {
                     <li> <NavLink to="/">Home</NavLink></li>
                     <li>  <NavLink to="/blog">Blog</NavLink> </li>
                     <li><NavLink to="contacts">Contacts</NavLink></li>
+                    {/* <li><NavLink to="chef">Chef</NavLink></li> */}
                 </ul>
 
             </div>

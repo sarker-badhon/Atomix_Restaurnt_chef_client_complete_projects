@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Navigate } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 
 const PrivateRoute = ({children}) => {
@@ -7,7 +8,7 @@ const PrivateRoute = ({children}) => {
     // const location = useLocation()
     // console.log(location);
     if(loading){
-        return <h3 className='page-loading'>Loading......</h3>
+        return <progress className="progress w-56"></progress>
     }
     if(user){
         return children;
