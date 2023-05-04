@@ -37,7 +37,7 @@ const Registration = () => {
               icon: 'success',
               title: 'Your work has been saved',
               showConfirmButton: false,
-              timer: 2000
+              timer: 2100
             })
             
         })
@@ -78,7 +78,7 @@ const Registration = () => {
               </div>
               <div className="form-control">
                 <label className="label ">
-                  <span className="label-text text-xl text-white font-bold">Photo Url</span>
+                  <span className="label-text text-xl text-white font-bold">Photo URL</span>
                 </label>
                 <input type="text" name="name" placeholder="Enter your url" className="input input-bordered w-80 " required/>
                 
