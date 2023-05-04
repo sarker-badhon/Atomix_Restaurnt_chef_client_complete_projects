@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Form, Link } from 'react-router-dom';
 import { AuthContext } from './Provider/AuthProvider';
 import { FaGooglePlus,FaGithubAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const {signInUser,googleLogIn,githubLogIn}=useContext(AuthContext)
@@ -20,6 +21,11 @@ const Login = () => {
     })
     .catch(error=>{
         console.log(error);
+        return Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Email and password dose not match !',
+        })
     })
 
 

@@ -9,7 +9,7 @@ const ChefRecipes = () => {
     const { id, chefName, yearsOfExperience, recipe, numRecipes, numAwards, like, imgLink } = chefData;
 
     useEffect(() => {
-        fetch('http://localhost:5500/recipesData')
+        fetch('https://atomix-server-sarker-badhon.vercel.app/recipesData')
             .then(res => res.json())
             .then(data => setFoods(data))
     }, [])

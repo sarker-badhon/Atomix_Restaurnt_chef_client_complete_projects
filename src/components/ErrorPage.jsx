@@ -2,22 +2,11 @@ import React from 'react';
 
 const ErrorPage = () => {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-red-500 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8">
-          <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold">
-              Oops! Something went wrong.
-            </h2>
-          </div>
-          <div className="mt-8">
-            <div className="text-center">
-              <p className="text-base font-medium">
-                Please try again later or contact support if the problem persists.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="flex flex-col items-center justify-center h-screen">
+      <img src="https://blog.thomasnet.com/hs-fs/hubfs/shutterstock_774749455.jpg?width=600&name=shutterstock_774749455.jpg" alt="Page not found" className="w-64 h-64 mb-8" />
+      <h1 className="text-3xl font-bold mb-4">Page Not Found</h1>
+      <p className="text-lg">The page you are looking for does not exist.</p>
+    </div>
     );
 };
 

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path:"/data/:id",
         element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute> ,
-        loader:({params})=> fetch(`http://localhost:5500/data/${params.id}`)
+        loader:({params})=> fetch(`https://atomix-server-sarker-badhon.vercel.app/data/${params.id}`)
         
       },
       {

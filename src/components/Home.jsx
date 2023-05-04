@@ -3,16 +3,17 @@ import Recipes from './recipes/recipes';
 
 const Home = () => {
     const [chefData, setChefData] = useState([])
+    
 
     useEffect(() => {
-        fetch("http://localhost:5500/data/")
+        fetch("https://atomix-server-sarker-badhon.vercel.app/data/")
             .then(res => res.json())
-            .then(data =>setChefData(data))
+            .then(data => setChefData(data))
     }, [])
 
 
 
-   
+
     return (
         <div>
             <div className="carousel w-full h-screen">
@@ -54,7 +55,27 @@ const Home = () => {
                 </div>
             </div>
 
-                {/* Recipes cards  */}
+
+
+            <div className="flex flex-wrap h-screen">
+                <div className="w-full lg:w-1/2 h-full flex items-center lg:mx-20">
+                    <div className="p-6 w-3/4">
+                        <h1 className="text-4xl font-bold mb-6">About Me</h1>
+                        <p className="font-bold text-xl">I fell like a prince with a knife.I`ve
+                            wanted to ben an Iron chef.
+                        </p>
+                        <p className="text-lg">
+                        A chef is a professional cook and tradesman who is proficient in all aspects of food preparation, often focusing on a particular cuisine. The word "chef" is derived from the term chef de cuisine, the director or head of a kitchen
+                        </p>
+                    </div>
+
+                </div>
+                <div className="w-96 lg:w-96 h-full flex items-center">
+                    <img src="https://as1.ftcdn.net/v2/jpg/03/24/34/90/1000_F_324349029_HAoB7LTak8t9Zg7R4dZPC2Zax9pg5KWD.jpg" alt="Home" className="h-96 w-full object-cover" />
+                </div>
+            </div>
+
+            {/* Recipes cards  */}
 
             <div>
                 <h2 className='text-center text-4xl font-bold mt-20'>Check Our Delicious Menu</h2>
@@ -71,25 +92,25 @@ const Home = () => {
                 </div>
             </div>
 
-                        {/* food Gallery */}
+            {/* food Gallery */}
 
             <div>
                 <h2 className='text-4xl text-center font-bold mb-14 '>Our Food Gallery</h2>
-                <marquee  behavior="" direction="">
-                   <div  className="lg:flex">
-                   <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
-                    <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
+                <marquee behavior="" direction="">
+                    <div className="lg:flex">
+                        <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
+                        <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
 
-                    <img className='h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
-                   
-                    <img className='h-60 rounded-2xl mx-2' src="https://npr.brightspotcdn.com/dims4/default/90c76e6/2147483647/strip/true/crop/960x640+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkcur%2Ffiles%2F201801%2FCashew-Chicken-Dish-Chinese-Food-1273256.jpg" alt="" />
+                        <img className='h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
 
-                    <img className='h-60 rounded-2xl mx-2' src="https://media.newyorker.com/photos/59097261019dfc3494ea24a5/master/w_2560%2Cc_limit/Hsu-Changing-Meanings-of-Asian-Food-in-America.jpg" alt="" />
-                    <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
-                    <img className='h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
+                        <img className='h-60 rounded-2xl mx-2' src="https://npr.brightspotcdn.com/dims4/default/90c76e6/2147483647/strip/true/crop/960x640+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkcur%2Ffiles%2F201801%2FCashew-Chicken-Dish-Chinese-Food-1273256.jpg" alt="" />
 
-                    <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
-                   </div>
+                        <img className='h-60 rounded-2xl mx-2' src="https://media.newyorker.com/photos/59097261019dfc3494ea24a5/master/w_2560%2Cc_limit/Hsu-Changing-Meanings-of-Asian-Food-in-America.jpg" alt="" />
+                        <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
+                        <img className='h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
+
+                        <img className='h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
+                    </div>
                 </marquee>
             </div>
 
@@ -97,7 +118,7 @@ const Home = () => {
 
 
 
-{/* //booking section */}
+            {/* //booking section */}
             <div className='bg-zinc-900'>
                 <div className='w-2/5 mx-20 my-24 p-10'>
                     <h1 className='text-4xl text-center text-white font-bold mb-4'>BOOK YOUR TABLE</h1>
