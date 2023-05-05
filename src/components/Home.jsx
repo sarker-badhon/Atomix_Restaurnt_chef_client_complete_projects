@@ -84,18 +84,12 @@ const Home = () => {
             </div>
 
 
-
-
-
-
-
-
             {/* Recipes cards  */}
 
             <div>
                 <h2 className='text-center text-4xl font-bold mt-20'>Check Our Delicious Menu</h2>
 
-                <div className='grid lg:grid-cols-3 my-20 mx-20'>
+                <div className='grid lg:grid-cols-3 my-20 mx-5 lg:mx-20'>
 
                     {
                         chefData.map(data => <Recipes
