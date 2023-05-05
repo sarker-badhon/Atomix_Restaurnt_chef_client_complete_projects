@@ -111,9 +111,10 @@ const Home = () => {
 
             <div className="bg-gray-100 py-9">
                 <h2 className='text-4xl text-center font-bold mb-14 '>Our Food Gallery</h2>
-                <marquee behavior="" direction="">
-                    <div className="flex flex-wrap justify-center lg:justify-start ">
-                        <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
+                <marquee>
+                    
+                    <div className="flex ">
+                        
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://npr.brightspotcdn.com/dims4/default/90c76e6/2147483647/strip/true/crop/960x640+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkcur%2Ffiles%2F201801%2FCashew-Chicken-Dish-Chinese-Food-1273256.jpg" alt="" />
@@ -121,6 +122,7 @@ const Home = () => {
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxwVpteTmftXxHY60rhPtBZHKe56RSpYsSg&usqp=CAU" alt="" />
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://post.greatist.com/wp-content/uploads/sites/2/2021/03/311521-grt-Keto-Chinese-Food-732x549-thumbnail.jpg" alt="" />
                         <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw5ZUBhGGQ_5hOJXJncLnRJeqG1vEvRz_NVA&usqp=CAU" alt="" />
+                        <img className='w-full lg:w-auto h-60 rounded-2xl mx-2' src="https://npr.brightspotcdn.com/dims4/default/90c76e6/2147483647/strip/true/crop/960x640+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkcur%2Ffiles%2F201801%2FCashew-Chicken-Dish-Chinese-Food-1273256.jpg" alt="" />
                     </div>
                 </marquee>
             </div>

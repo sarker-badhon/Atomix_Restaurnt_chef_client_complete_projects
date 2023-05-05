@@ -36,7 +36,7 @@ const Login = () => {
         return Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Email and password dose not match !',
+          text: "Email address or password doesn't match !",
           width: 400,
           height: 100,
         })
