@@ -25,23 +25,23 @@ const handlerBtnFv = ()=>{
 
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl my-10">
-      <figure><img src={image_link} alt="Shoes" /></figure>
-      <div className="card-body">
-        <h2 className="card-title">
-          {recipe_name}
-        </h2>
-        <li> <span className='underline font-bold'>ingredients:</span> <br />{ingredients} </li>
-           
-        <p > <span className='underline font-bold'>cooking method:</span> {cooking_method} </p>
-        <p className='flex gap-2 items-center'> <Rating style={{ maxWidth: 90 }} value={Math.round(rating)} readOnly /> {rating}    </p>
-        <div className="card-actions justify-end">
-          
-          
-          <button disabled={isFavorite} onClick={handlerBtnFv} className="btn blue-outline">Favourite</button>
-        </div>
+    <div className="card md:w-96 bg-base-100 shadow-xl my-10 mx-2">
+    <figure><img src={image_link} alt="Shoes" /></figure>
+    <div className="card-body p-4">
+      <h2 className="card-title text-lg md:text-xl font-medium mb-2">
+        {recipe_name}
+      </h2>
+      <li className="text-sm md:text-base"> <span className='underline font-bold'>ingredients:</span> <br />{ingredients} </li>
+         
+      <p className="text-sm md:text-base mt-2"> <span className='underline font-bold'>cooking method:</span> {cooking_method} </p>
+      <p className='flex gap-2 items-center text-sm md:text-base mt-2'> <Rating style={{ maxWidth: 90 }} value={Math.round(rating)} readOnly /> {rating}    </p>
+      <div className="card-actions justify-end mt-4">
+        
+        
+        <button disabled={isFavorite} onClick={handlerBtnFv} className="btn blue-outline text-sm md:text-base">{isFavorite ? 'Favourited' : 'Add to Favourites'}</button>
       </div>
     </div>
+  </div>
   );
 };
 
